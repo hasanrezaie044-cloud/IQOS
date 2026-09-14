@@ -1,0 +1,218 @@
+<resources>
+    <string name="app_name">ایکاس</string>
+    <string name="app_name_en">IQOS</string>
+    <string name="title_settings">تنظیمات</string>
+    <string name="title_debug">داشبورد خطایابی</string>
+
+    <!-- Connection States -->
+    <string name="status_prefix">وضعیت: %1$s</string>
+    <string name="state_disconnected">قطع ارتباط</string>
+    <string name="state_scanning">در حال جستجو…</string>
+    <string name="state_connecting">در حال اتصال…</string>
+    <string name="state_connected">متصل شد</string>
+    <string name="state_discovering_services">بررسی سرویس‌ها…</string>
+    <string name="state_ready">متصل و آماده</string>
+    <string name="state_busy">دستگاه در حال تبادل داده</string>
+    <string name="state_error">خطا در ارتباط</string>
+
+    <!-- Buttons -->
+    <string name="btn_scan_connect">جستجو و اتصال</string>
+    <string name="btn_disconnect">قطع اتصال</string>
+    <string name="btn_refresh_puffs">بروزرسانی داده‌ها</string>
+    <string name="btn_open_debug">خطایابی و لاگ‌ها</string>
+
+    <!-- Stats with TERA -->
+    <string name="section_stats">آمار مصرف ترا (TEREA)</string>
+    <string name="tera_today">ترا امروز: %1$d</string>
+    <string name="tera_yesterday">ترا دیروز: %1$d</string>
+    <string name="tera_week">ترا این هفته: %1$d</string>
+    <string name="tera_month">ترا این ماه: %1$d</string>
+    <string name="tera_total">مجموع کل ترا: %1$d</string>
+    <string name="label_tera_count">ترا</string>
+    <string name="battery_level">باتری: %1$s</string>
+    <string name="battery_unknown">--</string>
+
+    <!-- Device Details Card -->
+    <string name="device_model_title">IQOS ILUMA PRIME</string>
+    <string name="device_subtitle">پشتیبانی همزمان از بلوتوث و کابل USB</string>
+
+    <!-- Settings Activity -->
+    <string name="pref_theme">حالت شب (Dark Mode)</string>
+    <string name="pref_auto_connect">اتصال خودکار پس از باز شدن برنامه</string>
+    <string name="pref_reset_usage">بازنشانی آمار تاریخچه ترا</string>
+    <string name="pref_reset_confirm">آیا از حذف تاریخچه مصرف اطمینان دارید؟</string>
+    <string name="pref_about">درباره برنامه</string>
+    <string name="pref_about_desc">نسخه 5.0.0 (بیلد 11) - ارتباط آفلاین BLE و کابل USB با IQOS ILUMA، با خواندن کامل وضعیت و تأیید فرمان‌ها</string>
+    <string name="dialog_yes">بله</string>
+    <string name="dialog_no">خیر</string>
+    <string name="history_reset_success">تاریخچه ترا با موفقیت بازنشانی شد.</string>
+
+    <!-- Error Messages -->
+    <string name="error_bt_disabled">بلوتوث خاموش است. لطفاً آن را روشن کنید.</string>
+    <string name="error_permissions_denied">مجوزهای بلوتوث داده نشده است.</string>
+    <string name="error_device_not_found">دستگاه IQOS در اسکن BLE یافت نشد.</string>
+    <string name="error_service_not_found">سرویس مربوطه روی دستگاه یافت نشد.</string>
+    <string name="error_write_failed">خطا در ارسال فرمان به دستگاه.</string>
+    <string name="error_read_failed">خطا در خواندن مشخصه از دستگاه.</string>
+    <string name="error_single_connection">توجه: IQOS در هر لحظه فقط یک اتصال فعال را می‌پذیرد.</string>
+
+    <!-- Transport & Debug -->
+    <string name="transport_ble">بلوتوث (BLE)</string>
+    <string name="transport_usb">کابل (USB)</string>
+    <string name="transport_none">بدون اتصال</string>
+    <string name="debug_clear_logs">پاک کردن لاگ‌ها</string>
+    <string name="app_version">نسخه 5.0.0</string>
+
+    <!-- Tabs -->
+    <string name="tab_home">خانه</string>
+    <string name="tab_device">دستگاه</string>
+    <string name="tab_usage">استفاده</string>
+    <string name="tab_settings">تنظیمات</string>
+
+    <!-- Usage Periods -->
+    <string name="filter_today">امروز</string>
+    <string name="filter_week">هفتگی</string>
+    <string name="filter_month">ماهانه</string>
+    <string name="filter_year">سالانه</string>
+
+    <!-- Time slots -->
+    <string name="slot_morning">۰۵:۰۰ تا ۱۲:۰۰</string>
+    <string name="slot_afternoon">۱۲:۰۰ تا ۱۸:۰۰</string>
+    <string name="slot_evening">۱۸:۰۰ تا ۰۰:۰۰</string>
+    
+    <!-- Device Features -->
+    <string name="feature_smart_gesture">ژست‌های هوشمند (Smart Gesture)</string>
+    <string name="feature_flex_puff">فلکس‌پاف (FlexPuff)</string>
+    <string name="feature_autostart">روشن شدن خودکار (Autostart)</string>
+    <string name="feature_vibration">لرزش برای پیدا کردن دستگاه (Find My IQOS)</string>
+    <string name="feature_illumination">حالت روشنایی (Illumination Mode)</string>
+    <string name="feature_pause_mode">حالت توقف (Pause Mode)</string>
+    <string name="feature_flex_battery">فلکس‌باتری (FlexBattery)</string>
+    <string name="status_unsupported">پشتیبانی نمی‌شود (نیازمند ILUMA i)</string>
+    <string name="status_supported_active">فعال (پشتیبانی‌شده در ILUMA PRIME)</string>
+    <string name="status_off">خاموش</string>
+    <string name="status_on">روشن</string>
+    <string name="flex_battery_desc">میزان استفاده از ظرفیت اضافه باتری برای پاف بیشتر</string>
+    <string name="btn_flex_battery_refresh">دریافت وضعیت زنده از دستگاه</string>
+    <string name="rename_device">تغییر نام دستگاه</string>
+    <string name="lifetime_total_label">مجموع کل مصرف (از حافظه دستگاه)</string>
+    <string name="lifetime_total_desc">شامل تمام ترا‌هایی که تا امروز کشیده‌اید، حتی قبل از نصب این اپ</string>
+
+    <!-- Bottom Nav (icon-based, matches official IQOS app layout) -->
+    <string name="nav_home">خانه</string>
+    <string name="nav_device">دستگاه</string>
+    <string name="nav_usage">استفاده</string>
+    <string name="nav_settings">تنظیمات</string>
+
+
+    <!-- ============ v5.0.0: live technical readout + advanced device control ============ -->
+    <string name="value_unknown">نامشخص</string>
+    <string name="model_unknown">مدل شناسایی‌شده: نامشخص</string>
+    <string name="label_voltage">ولتاژ باتری</string>
+    <string name="label_signal">قدرت سیگنال</string>
+    <string name="label_firmware">فریم‌ور</string>
+
+    <string name="nav_advanced">پیشرفته</string>
+    <string name="tab_advanced">پیشرفته</string>
+
+    <string name="adv_read_all">خواندن کامل دستگاه</string>
+    <string name="adv_explore">کاوش مشخصه‌ها</string>
+
+    <string name="adv_controls_title">کنترل‌های پیشرفته دستگاه</string>
+    <string name="adv_controls_desc">هر فرمان پس از ارسال، وضعیت را از خود دستگاه می‌خواند و نتیجه واقعی را نشان می‌دهد. اگر دستگاه فرمان را نپذیرد، همان را گزارش می‌کند.</string>
+    <string name="adv_brightness">روشنایی LED (زیاد / کم)</string>
+    <string name="adv_flexbattery_mode">حالت فلکس‌باتری (اکو / پرفورمنس)</string>
+    <string name="adv_lock_title">قفل دستگاه</string>
+    <string name="adv_lock_desc">قفل و بازکردن قفل با دنباله فرمان واقعی سه‌مرحله‌ای انجام می‌شود. دستگاه فرمان خواندن وضعیت قفل ندارد، پس نتیجه به‌صورت «ارسال شد» گزارش می‌شود.</string>
+    <string name="adv_lock">قفل کردن</string>
+    <string name="adv_unlock">بازکردن قفل</string>
+    <string name="adv_findmy_title">پیدا کردن دستگاه</string>
+    <string name="adv_findmy_desc">یک لرزش فیزیکی واقعی روی دستگاه اجرا می‌کند.</string>
+    <string name="adv_find_start">شروع لرزش</string>
+    <string name="adv_find_stop">توقف لرزش</string>
+
+    <string name="adv_vibration_title">بازخورد لرزشی دستگاه</string>
+    <string name="adv_vibration_desc">این چهار حالت، تنظیمات واقعی لرزش دستگاه هستند (نه فقط یک کلید روشن/خاموش). مقدارها از دستگاه خوانده می‌شوند.</string>
+    <string name="adv_vib_heating">لرزش هنگام شروع گرم شدن</string>
+    <string name="adv_vib_startuse">لرزش هنگام آماده شدن برای مصرف</string>
+    <string name="adv_vib_puffend">لرزش نزدیک پایان پاف</string>
+    <string name="adv_vib_manual">لرزش هنگام خاتمه دستی</string>
+    <string name="adv_vib_charge">لرزش هنگام شروع شارژ (فقط مدل‌های هولدردار)</string>
+    <string name="adv_vib_apply">ثبت تنظیمات لرزش روی دستگاه</string>
+
+    <string name="adv_report_title">گزارش فنی کامل دستگاه</string>
+    <string name="adv_report_empty">برای دریافت اطلاعات، دستگاه را متصل کنید و «خواندن کامل دستگاه» را بزنید.</string>
+    <string name="adv_copy_report">کپی گزارش</string>
+    <string name="adv_capabilities_title">قابلیت‌های این مدل</string>
+    <string name="adv_commandlog_title">نتیجه آخرین فرمان‌ها</string>
+    <string name="adv_commandlog_empty">هنوز فرمانی ارسال نشده است.</string>
+    <string name="adv_gatt_title">سرویس‌ها و مشخصه‌های دستگاه</string>
+    <string name="adv_gatt_empty">پس از اتصال، کل ساختار GATT دستگاه اینجا نمایش داده می‌شود.</string>
+    <string name="adv_limits_title">محدودیت‌های واقعی سخت‌افزار</string>
+    <string name="adv_limits_body">دمای واقعی تیغه گرم‌کن: دستگاه هیچ مشخصه یا فرمانی برای خواندن دما در اختیار برنامه نمی‌گذارد، پس هیچ عدد دمایی نمایش داده نمی‌شود (هر عددی که نشان داده شود ساختگی است). دکمه «کاوش مشخصه‌ها» تمام مقادیر خواندنی دستگاه را نشان می‌دهد تا خودتان ببینید چه چیزی واقعاً وجود دارد.\n\nتغییر دما، پروفایل گرمایش یا هر رفتار ایمنی گرم‌کن: در فریم‌ور قفل است و از بیرون قابل تغییر نیست.\n\nآپدیت فریم‌ور دستگاه: فقط با اپ رسمی و سرور سازنده انجام می‌شود.\n\nوضعیت قفل دستگاه: فرمان قفل/بازکردن واقعی است، اما فرمان خواندن وضعیت قفل مستند نشده، پس تأیید خودکار ندارد.</string>
+
+    <string name="cmd_result_title">نتیجه فرمان</string>
+    <string name="status_unknown_value">نامشخص</string>
+
+    <!-- ============ Multi-device support ============ -->
+    <string name="my_devices_title">دستگاه‌های من</string>
+    <string name="add_device">افزودن دستگاه</string>
+    <string name="remove_device_title">حذف دستگاه</string>
+    <string name="remove_device_confirm">این دستگاه از فهرست دستگاه‌های شما حذف شود؟</string>
+    <string name="no_devices_yet">هنوز دستگاهی اضافه نشده. برای شروع، دستگاه IQOS خود را اضافه کنید.</string>
+    <string name="device_connected_badge">متصل</string>
+    <string name="device_saved_badge">ذخیره‌شده</string>
+    <string name="last_connected_prefix">آخرین اتصال: %1$s</string>
+
+    <!-- ============ Redesigned Home tab ============ -->
+    <string name="home_ready_to_use">آماده مصرف</string>
+    <string name="home_led_brightness">روشنایی LED</string>
+    <string name="home_stat_today">تراهای امروز</string>
+    <string name="home_stat_lifetime">کل تراهای عمر</string>
+    <string name="home_stat_days_in_service">روزهای در سرویس</string>
+    <string name="home_stat_current_cycle">شمارنده دوره فعلی</string>
+    <string name="btn_device_settings">تنظیمات دستگاه</string>
+    <string name="btn_refresh_status">بروزرسانی وضعیت</string>
+    <string name="unit_tera">ترا</string>
+    <string name="unit_puff">پاف</string>
+    <string name="unit_day">روز</string>
+
+    <!-- ============ Redesigned Usage tab ============ -->
+    <string name="usage_week_trend_title">روند مصرف هفته</string>
+    <string name="usage_today_sessions_title">تراهای امروز</string>
+    <string name="usage_no_sessions_today">هنوز امروز مصرفی ثبت نشده است</string>
+    <string name="usage_less_than_yesterday">امروز %1$d ترا کمتر از دیروز مصرف کرده‌اید</string>
+    <string name="usage_more_than_yesterday">امروز %1$d ترا بیشتر از دیروز مصرف کرده‌اید</string>
+    <string name="usage_same_as_yesterday">مصرف امروز با دیروز برابر است</string>
+    <string name="usage_today_vs_yesterday">امروز: %1$d ترا  |  دیروز: %2$d ترا</string>
+    <string name="filter_all">کل</string>
+
+    <!-- ============ Redesigned Device tab ============ -->
+    <string name="device_smart_efficiency_title">مصرف و کارایی هوشمند</string>
+    <string name="device_auto_mode_title">حالت خودکار</string>
+    <string name="device_auto_mode_desc">بهینه‌سازی خودکار مصرف بر اساس الگوی استفاده</string>
+    <string name="mode_eco">اکو</string>
+    <string name="mode_performance">پرفورمنس</string>
+    <string name="device_motion_lock_title">سنسور حرکتی و قفل</string>
+    <string name="device_motion_lock_desc">کنترل ژست هوشمند و قفل مصرف</string>
+    <string name="device_display_brightness_title">نمایشگر و روشنایی</string>
+    <string name="device_display_brightness_desc">روشنایی LED نشانگر و برچسب محلی</string>
+    <string name="device_advanced_link">تنظیمات پیشرفته دستگاه</string>
+
+    <!-- ============ Redesigned Settings tab ============ -->
+    <string name="settings_connectivity_title">اتصال و اعلان‌های هوشمند</string>
+    <string name="settings_connectivity_desc">مدیریت ارتباط بلوتوثی و هشدارهای مصرف</string>
+    <string name="settings_backup_title">پشتیبان‌گیری و ذخیره‌سازی داده‌ها</string>
+    <string name="settings_backup_desc">کاملاً آفلاین — تمام تاریخچه و رکوردهای ترا در حافظه محلی ذخیره می‌شوند</string>
+    <string name="btn_export_json">دریافت خروجی JSON</string>
+    <string name="btn_restore_file">بازیابی از فایل</string>
+
+    <!-- ============ Background sync ============ -->
+    <string name="background_sync_title">همگام‌سازی در پس‌زمینه</string>
+    <string name="background_sync_desc">حتی وقتی اپ بسته است، به محض ورود دستگاه به محدوده بلوتوث وصل می‌شود و مصرف را ثبت می‌کند</string>
+    <string name="background_sync_battery_link">حذف محدودیت باتری برای این اپ (توصیه‌شده برای عملکرد بهتر پس‌زمینه)</string>
+
+    <!-- ============ Full diagnostic export ============ -->
+    <string name="adv_copy_full_diagnostic">کپی گزارش کامل برای تحلیل</string>
+    <string name="adv_copy_full_diagnostic_desc">شامل گزارش فنی + آمار فریم‌های این نشست + تاریخچه دائمی مشخصه‌های ناشناخته از همه نشست‌های قبلی. این متن را می‌توانید مستقیماً کپی و برای تحلیل ارسال کنید.</string>
+</resources>

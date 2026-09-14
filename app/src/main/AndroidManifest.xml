@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Legacy BLE permissions for Android 11 and lower (API <= 30) -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_ADMIN"
+        android:maxSdkVersion="30" />
+
+    <!-- Location: requested on ALL Android versions to match the official IQOS Connect app and
+         help with OEM skins that behave oddly (MIUI, ColorOS, One UI). IMPORTANT: this is
+         requested as a courtesy/compat permission only and must NOT be required for BLE to
+         work on API 31+, because BLUETOOTH_SCAN below carries neverForLocation - if that flag
+         is ever removed, Android additionally requires system Location Services to be toggled
+         ON for scan results to come back at all, which silently breaks connecting even when
+         every permission shows as granted. This was an actual regression introduced and now
+         fixed: keep neverForLocation on BLUETOOTH_SCAN below. -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" android:maxSdkVersion="30" />
+
+    <!-- Required on Android 13+ (API 33+) or NotificationManager.notify() silently does
+         nothing - this is why local usage notifications never appeared even though
+         NotificationHelper.kt was already wired up correctly in code. -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- Background sync: lets IqosBackgroundService keep a BLE connection alive with the app
+         closed, so puffs taken before the app is next opened still land on the correct day
+         instead of being folded into whichever day the app happens to reopen on. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <!-- Modern BLE permissions for Android 12+ (API 31+) -->
+    <!-- neverForLocation tells the OS this app's BLE scan is not used to infer location, which
+         is what lets scanning work on API 31+ WITHOUT needing ACCESS_FINE_LOCATION granted and
+         WITHOUT needing system Location Services switched on. This is the setting that must
+         stay in place for Bluetooth connecting to keep working. -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_SCAN"
+        android:usesPermissionFlags="neverForLocation"
+        tools:targetApi="s" />
+    <uses-permission
+        android:name="android.permission.BLUETOOTH_CONNECT"
+        tools:targetApi="s" />
+
+    <!-- Features -->
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.IQOSController">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- USB Device Attached Intent Filter -->
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+            </intent-filter>
+            <meta-data
+                android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED"
+                android:resource="@xml/device_filter" />
+        </activity>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_settings"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <activity
+            android:name=".DebugActivity"
+            android:label="@string/title_debug"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+
+        <service
+            android:name=".IqosBackgroundService"
+            android:exported="false"
+            android:foregroundServiceType="connectedDevice" />
+
+        <receiver
+            android:name=".BootReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.IQOSController" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/iqos_teal</item>
+        <item name="colorPrimaryVariant">@color/iqos_teal_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/iqos_teal</item>
+        <item name="android:windowBackground">@color/iqos_light_bg</item>
+        <item name="android:statusBarColor">@color/iqos_dark_bg</item>
+    </style>
+</resources>

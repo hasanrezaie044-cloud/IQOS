@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- IQOS Dark Palette (matches the reference screenshots) -->
+    <color name="iqos_dark_bg">#07090A</color>
+    <color name="iqos_dark_surface">#101416</color>
+    <color name="iqos_teal">#1BD8A0</color>
+    <color name="iqos_teal_light">#12332A</color>
+    <color name="iqos_teal_dark">#0FA377</color>
+    <color name="iqos_dark_teal">#0FA377</color>
+    <color name="iqos_light_bg">#07090A</color>
+    <color name="iqos_card_bg">#12171A</color>
+    <color name="iqos_card_stroke">#232B2E</color>
+
+    <!-- Text colors -->
+    <color name="text_primary">#F5F7F7</color>
+    <color name="text_secondary">#A7B1B3</color>
+    <color name="text_muted">#71797C</color>
+    <color name="text_on_dark">#FFFFFF</color>
+
+    <!-- Status colors -->
+    <color name="status_green">#1BD8A0</color>
+    <color name="status_red">#FF5C61</color>
+    <color name="status_amber">#F5A623</color>
+    <color name="status_connected">#1BD8A0</color>
+    <color name="status_disconnected">#FF5C61</color>
+    <color name="status_warning">#F5A623</color>
+
+    <!-- Switch colors -->
+    <color name="switch_thumb">#1BD8A0</color>
+    <color name="switch_track">#12332A</color>
+
+    <!-- Material / System colors -->
+    <color name="primary">#1BD8A0</color>
+    <color name="primary_dark">#07090A</color>
+    <color name="accent">#1BD8A0</color>
+    <color name="accent_gold">#D97706</color>
+    <color name="background_light">#07090A</color>
+    <color name="surface_light">#12171A</color>
+    <color name="white">#FFFFFF</color>
+    <color name="divider_color">#1E2528</color>
+    <color name="ic_launcher_background">#0F1113</color>
+
+    <!-- Legacy dark-mode aliases (kept in sync with the palette above) -->
+    <color name="dark_bg">#07090A</color>
+    <color name="dark_card_bg">#12171A</color>
+    <color name="dark_text_primary">#F5F7F7</color>
+    <color name="dark_text_secondary">#A7B1B3</color>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- IQOS / Philip Morris known USB Vendor IDs (e.g. 0x303a, 0x0483 STMicro, 0x10c4 Silicon Labs, etc.) -->
+    <!-- We leave this broad or empty so USB discovery does not drop unexpected ILUMA VID/PIDs -->
+</resources>

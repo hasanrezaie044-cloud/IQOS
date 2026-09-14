@@ -1,0 +1,73 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+
+android {
+    namespace 'com.example.iqoscontroller'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.iqoscontroller"
+        minSdk 24
+        targetSdk 34
+        versionCode 11
+        versionName "5.0.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    // Fixed keystore committed at /keystore/iqos-debug.keystore. Without this, Gradle's default
+    // debug keystore is auto-generated fresh inside every CI runner (a new VM each time), so
+    // every workflow run produces an APK signed with a DIFFERENT random key. Android then
+    // silently refuses to install an "update" whose signature doesn't match the one already on
+    // the phone - this is why previous builds appeared to change nothing after reinstalling.
+    signingConfigs {
+        fixedDebug {
+            storeFile file("${rootDir}/keystore/iqos-debug.keystore")
+            storePassword "iqos123456"
+            keyAlias "iqoscontroller"
+            keyPassword "iqos123456"
+        }
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix ".debug"
+            debuggable true
+            signingConfig signingConfigs.fixedDebug
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.fixedDebug
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.11.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3'
+
+    testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.json:json:20231013'
+}

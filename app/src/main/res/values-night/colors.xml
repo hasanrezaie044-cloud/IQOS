@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- IQOS Brand Colors (Night Mode) - identical to the default palette since the app is dark by default -->
+    <color name="iqos_teal">#1BD8A0</color>
+    <color name="iqos_teal_light">#12332A</color>
+    <color name="iqos_dark_teal">#0FA377</color>
+
+    <color name="iqos_card_bg">#12171A</color>
+    <color name="iqos_card_stroke">#232B2E</color>
+
+    <color name="text_primary">#F5F7F7</color>
+    <color name="text_secondary">#A7B1B3</color>
+    <color name="text_muted">#71797C</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="divider_color">#1E2528</color>
+
+    <color name="status_connected">#1BD8A0</color>
+    <color name="status_disconnected">#FF5C61</color>
+    <color name="status_warning">#F5A623</color>
+
+    <color name="switch_thumb">#1BD8A0</color>
+    <color name="switch_track">#12332A</color>
+
+    <color name="dark_bg">#07090A</color>
+    <color name="dark_card_bg">#12171A</color>
+    <color name="dark_text_primary">#F5F7F7</color>
+    <color name="dark_text_secondary">#A7B1B3</color>
+</resources>
